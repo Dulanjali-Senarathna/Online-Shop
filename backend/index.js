@@ -1,6 +1,8 @@
 const express = require("express")
 const cors = require("cors")
 
+const products = require("./products")
+
 const app = express()
 
 app.use(express.json())
@@ -11,7 +13,7 @@ app.get("/",(req, res) =>{
 })
 
 app.get("/products",(req, res) =>{
-    res.send([2,4,3,5]);
+    res.send(products);
 })
 
 
